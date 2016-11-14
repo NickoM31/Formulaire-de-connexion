@@ -3,12 +3,17 @@
 	var app = {
 		
 		init:function(){
-		$('form').on('submit', app.recupInfo);	
+			app.listeners();
 		},
-		
+		listeners : function(){
+			$('form').on('submit', app.recupInfo);
+		},	
 		recupInfo : function(){
-			$('#name').val();
-			$('#mdp').val();	
+			
+			var name = $('#name').val();
+			var password = $('#mdp').val();
+			console.log(name,password);
+
 		},
 
 	};
